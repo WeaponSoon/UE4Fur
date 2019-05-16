@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{ABEACB38-4808-9BF7-5205-6C8D790AE518}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "FurTest",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}
