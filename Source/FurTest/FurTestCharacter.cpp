@@ -144,11 +144,13 @@ void AFurTestCharacter::BeginPlay()
     bool ss2 = furMesh != nullptr;
     if(PassMaterials != nullptr && furMesh != nullptr)
     {
-        for(int i = 0; i < 5; ++i)
+        for(int i = 0; i < 15; ++i)
         {
             auto tempMat = UMaterialInstanceDynamic::Create(PassMaterials, this);
             //tempMat->SetVectorParameterValue(FName("Param"), FLinearColor(FMath::VRand()));
             tempMat->SetScalarParameterValue(FName("Offset"), i);
+            tempMat->SetScalarParameterValue(FName("MaxLayer"), 15);
+            tempMat->SetScalarParameterValue(FName("DarkBase"), 0.0f);
             furMesh->MultiPassMaterial.Add(tempMat);
         }
         
