@@ -160,6 +160,8 @@ void UFurSkeletalMeshComponent::TickComponent(float DeltaTime, ELevelTick TickTy
 					size.Y = InnerShadowCaster->TextureTarget->SizeY;
 					BuildProjectionMatrix(size, InnerShadowCaster->ProjectionType, InnerShadowCaster->FOVAngle, InnerShadowCaster->OrthoWidth, mat);
 					auto worldToLocal = InnerShadowCaster->GetComponentTransform().ToInverseMatrixWithScale();
+					InnerShadowCaster->GetForwardVector();
+
 					FMatrix finalMat =  worldToLocal * FMatrix(
 						FPlane(0, 0, 1, 0),
 						FPlane(1, 0, 0, 0),
